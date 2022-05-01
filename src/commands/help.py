@@ -2,8 +2,6 @@ from colorama import Fore
 
 
 def command_help(cli):
-    cli.println()
-
     cli.print("Usage: ")
     cli.println("ksa.exe [arguments]", Fore.RED)
     cli.println("")
@@ -23,8 +21,3 @@ def command_help(cli):
 
     cli.print("   /etk", Fore.YELLOW)
     cli.println("      -   exports all labels to pdf files")
-
-    cli.print("   /help", Fore.YELLOW)
-    cli.println("     -   prints the help page")
-
-    cli.println()

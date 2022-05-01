@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<entries>
+    <entry>
+        <objekt_nr>2.2345.21.234</objekt_nr>
+        <kunden_nr>346665</kunden_nr>
+        <obj_strasse>Aweg</obj_strasse>
+        <obj_haus_nr>1</obj_haus_nr>
+        <obj_plz>11111</obj_plz>
+        <obj_ort>A</obj_ort>
+        <abfallart>Bio</abfallart>
+        <volumen>120</volumen>
+        <anzahl>1</anzahl>
+    </entry>
+    <entry>
+        <objekt_nr>2.2345.21.234</objekt_nr>
+        <kunden_nr>346665</kunden_nr>
+        <obj_strasse>Aweg</obj_strasse>
+        <obj_haus_nr>1</obj_haus_nr>
+        <obj_plz>11111</obj_plz>
+        <obj_ort>A</obj_ort>
+        <abfallart>Papier</abfallart>
+        <volumen>240</volumen>
+        <anzahl>1</anzahl>
+    </entry>
+</entries>

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS cities (
+
+    id INTEGER PRIMARY KEY,
+
+    postcode VARCHAR(10) NOT NULL,
+    name VARCHAR(50) NOT NULL
+
+);

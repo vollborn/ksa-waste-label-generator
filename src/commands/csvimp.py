@@ -2,6 +2,7 @@ import csv
 
 from src.helpers.DirectoryHelper import DirectoryHelper
 from src.helpers.EntryHelper import EntryHelper
+from src.services.DependencyInjector import DependencyInjector
 
 
 def command_csvimp():
@@ -10,4 +11,4 @@ def command_csvimp():
     for file in files:
         with open(file) as fileobject:
             for entry in csv.DictReader(fileobject, delimiter=";"):
-                EntryHelper.handle(entry)
+                DependencyInjector.inject(EntryHelper.handle, entry)

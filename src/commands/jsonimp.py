@@ -2,6 +2,7 @@ import json
 
 from src.helpers.DirectoryHelper import DirectoryHelper
 from src.helpers.EntryHelper import EntryHelper
+from src.services.DependencyInjector import DependencyInjector
 
 
 def command_jsonimp():
@@ -12,4 +13,4 @@ def command_jsonimp():
             data = json.load(fileobject)
 
             for entry in data:
-                EntryHelper.handle(entry)
+                DependencyInjector.inject(EntryHelper.handle, entry)

@@ -4,6 +4,7 @@ import xmltodict
 
 from src.helpers.DirectoryHelper import DirectoryHelper
 from src.helpers.EntryHelper import EntryHelper
+from src.services.DependencyInjector import DependencyInjector
 
 
 def command_xmlimp():
@@ -18,4 +19,4 @@ def command_xmlimp():
         for entry in data['entries']['entry']:
             # needs to be converted from ordered dict to dict first
             converted = json.loads(json.dumps(entry))
-            EntryHelper.handle(converted)
+            DependencyInjector.inject(EntryHelper.handle, converted)

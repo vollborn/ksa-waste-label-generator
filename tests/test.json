@@ -11,7 +11,18 @@
     "anzahl": "1"
   },
   {
-    "objekt_nr": "2.2345.21.234",
+    "objekt_nr": "2.2345.21.235",
+    "kunden_nr": "346665",
+    "obj_strasse": "Aweg",
+    "obj_haus_nr": "1",
+    "obj_plz": "11111",
+    "obj_ort": "A",
+    "abfallart": "Papier",
+    "volumen": "240",
+    "anzahl": "5"
+  },
+  {
+    "objekt_nr": "2.2345.21.236",
     "kunden_nr": "346665",
     "obj_strasse": "Aweg",
     "obj_haus_nr": "1",

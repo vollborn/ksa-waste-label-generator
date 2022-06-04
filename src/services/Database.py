@@ -27,3 +27,11 @@ class Database:
             with open(file) as stream:
                 content = stream.read()
                 self.cursor.execute(content)
+
+    def execute(self, query, values=()):
+        return self.connection.execute(query, values)
+
+    def fetchone(self, query, values=()):
+        cursor = self.connection.cursor()
+        cursor.execute(query, values)
+        return cursor.fetchone()

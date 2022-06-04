@@ -45,4 +45,4 @@ class DependencyInjector:
             if argName in dependencyKeys:
                 args.append(instance.dependencies[argName])
 
-        function(*custom_arguments, *args)
+        return function(*custom_arguments, *args)

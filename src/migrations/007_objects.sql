@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS objects (
 
     id INTEGER PRIMARY KEY,
-    number VARCHAR(50) NOT NULL,
+    number VARCHAR(50) UNIQUE NOT NULL,
 
     customer_number INTEGER NOT NULL,
 

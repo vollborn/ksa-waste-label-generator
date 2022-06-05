@@ -35,3 +35,8 @@ class Database:
         cursor = self.connection.cursor()
         cursor.execute(query, values)
         return cursor.fetchone()
+
+    def fetchall(self, query, values=()):
+        cursor = self.connection.cursor()
+        cursor.execute(query, values)
+        return cursor.fetchall()

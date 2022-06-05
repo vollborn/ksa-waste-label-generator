@@ -1,2 +1,5 @@
 colorama
 xmltodict
+fpdf
+python-barcode
+pillow

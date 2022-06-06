@@ -1,4 +1,4 @@
-from src.config import colors, backgrounds
+from src.config import colors, backgrounds, migrations
 
 
 class Config:
@@ -7,7 +7,8 @@ class Config:
     def __init__(self):
         self.data = {
             "colors": colors.get(),
-            "backgrounds": backgrounds.get()
+            "backgrounds": backgrounds.get(),
+            "migrations": migrations.get()
         }
 
     def get(self, key):

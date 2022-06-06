@@ -1,7 +1,7 @@
 import os
 
 from barcode.writer import ImageWriter
-from barcode import EAN13
+from barcode import Code128
 
 from src.services.DependencyInjector import DependencyInjector
 from fpdf import FPDF
@@ -74,7 +74,7 @@ class ExportHelper:
             pdf.cell(0, 4, 'Volumen: ' + str(bin_model[2]), 0, True)
 
             barcode = self.get_barcode(bin_model)
-            pdf.image(barcode, 120, 10, h=20)
+            pdf.image(barcode, 120, 10, 40, 20)
 
             if os.path.exists(barcode):
                 os.remove(barcode)
@@ -87,10 +87,10 @@ class ExportHelper:
         number = str(bin_model[0])
         filename = 'etikett-' + number
 
-        ean13Number = "00000000000" + number
-        ean13Number = ean13Number[-12:]
+        codeNumber = "000000" + number
+        codeNumber = codeNumber[-6:]
 
-        code = EAN13(ean13Number, writer=ImageWriter())
+        code = Code128(codeNumber, writer=ImageWriter())
         code.save(filename)
 
         return filename + '.png'

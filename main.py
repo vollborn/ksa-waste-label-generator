@@ -1,4 +1,3 @@
-import inspect
 import sys
 
 from src.commands.csvimp import command_csvimp

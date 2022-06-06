@@ -22,11 +22,13 @@ class DependencyInjector:
         instance = cls.get_instance()
 
         if instance.dependencies is None:
+            config = Config()
+
             instance.dependencies = {
                 "args": sys.argv,
                 "cli": CLI(),
-                "config": Config(),
-                "database": Database()
+                "config": config,
+                "database": Database(config)
             }
 
         argSpecs = inspect.getfullargspec(function)
